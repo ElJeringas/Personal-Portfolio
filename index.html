@@ -29,7 +29,7 @@
                     <h3 class="nav__name">Santiago Sarmiento</h3>
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a href="#home" class="nav__link">Home</a>
+                            <a href="#home" class="nav__link active-link">Home</a>
                         </li>
                         <li class="nav__item">
                             <a href="#about" class="nav__link">About</a>
@@ -38,7 +38,7 @@
                             <a href="#projects" class="nav__link">Projects</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#contacts" class="nav__link">Contact Me</a>
+                            <a href="#contacts" class="nav__" id="nav__link-button">Contact Me</a>
                         </li>
                     </ul>
                     <div class="nav__close" id="nav-close">
@@ -61,7 +61,7 @@
                 <h1 class="home__name">Santiago's Portfolio</h1>
                 <div class="home__profile">
                     <div class="home__image">
-                        <img src="./assets/images/about-perfil.jpg" alt="profile image" class="home__img">
+                        <img src="./assets/images/home.jpg" alt="profile image" class="home__img">
                         <div class="home__shadow"></div>
                         <img src="./assets/images/curved-arrow.svg" alt="arrow" class="home__arrow">
                         <img src="./assets//images/random-lines.svg" alt="lines" class="home__line">
@@ -74,11 +74,25 @@
                         <i class="ri-instagram-line"></i>
                     </a>
                     <a href="" target="_blank" class="home__social-link">
-                        <i class="li-linkedin-box-line"></i>
+                        <i class="ri-linkedin-box-line"></i>
                     </a>
                     <a href="" target="_blank" class="home__social-link">
                         <li class="ri-github-line"></li>
                     </a>
+                </div>
+                <div class="home__banner grid">
+                        <div class="home__banner-content">
+                            <h2 class="home__banner-title">5+</h2>
+                            <p class="home__banner-description">Experience Years</p>
+                        </div>
+                        <div class="home__banner-content">
+                            <h2 class="home__banner-title">300+</h2>
+                            <p class="home__banner-description">Github contributions.</p>
+                        </div>
+                        <div class="home__banner-content">
+                            <h2 class="home__banner-title">5+</h2>
+                            <p class="home__banner-description">Certificates and Courses.</p>
+                    </div>
                 </div>
             </div>
             <div class="home__info">
@@ -101,7 +115,7 @@
                 <h2 class="section__title-1">About Me</h2>
                 <div class="about__perfil">
                     <div class="about__image">
-                        <img src="./assets/images/about-perfil.jpg" alt="about" class="about__img">
+                        <img src="./assets/images/perfil.png" alt="about" class="about__img">
                         <div class="about__shadow"></div>
                         <div class="geometric-box"></div>
                         <img src="./assets/images/random-lines.svg" alt="lines" class="about__line">
@@ -121,7 +135,7 @@
                         </li>
                     </ul>
                     <div class="about__buttons">
-                        <a href="#contacts" class="button">
+                        <a href="#contacts" class="button-neubrutalism ">
                             <i class="ri-send-plane-line">  Contact Me</i>
                         </a>
                         <a href="www.linkedin.com" class="button__ghost" target="_blank">
@@ -134,6 +148,10 @@
 
         <!--==================== SERVICES ====================-->
         <section class="services section">
+            <div class="services__banner-1">
+                <p class="services__description-2"><span class="console-1">console</span><span class="console-2">.log</span>("Frontend Developer")</p>
+            </div>
+
             <h2 class="section__title-2">
                 <span>Services</span>
             </h2>
@@ -172,10 +190,20 @@
                         </div>
                 </article>
             </div>
+            <div class="services__banner-2">
+                <p class="services__description"><span class="console-1a">await </span><span class="console-2a"> getResumeData</span>()</p>
+            </div>
         </section>
 
         <!--==================== PROJECTS ====================-->
         <section class="projects section" id="projects">
+            <div class="services__banner-3">
+                <p class="services__description"><span class="console-1a"></span>
+                    <span class="console-1a">async function</span>  <span class="console-1">getResumeData </span>() { <br/>
+                      <span class="console-3a">const</span> <span class="console-4a">fetchedData</span> =  <br/>
+                      <span class="console-3a">await</span> <span class="console-2a">fetch</span> ("https://localhost:5500"); <br/>
+                  }</p>
+            </div>
             <h2 class="section__title-1">
                 <span>Projects</span>
             </h2>
@@ -260,24 +288,114 @@
         </section>
 
         <!--==================== CONTACT ====================-->
-        <section class="contact section" id="contact">
-            
+        <section class="contact section" id="contacts">
+            <div class="contact__container grid">
+                <div class="contact__data">
+                    <div class="geometric-box" id="first"></div>
+                    <h2 class="section__title-2">
+                        <span>Find Me <br/> Elsewhere...</span>
+                    </h2>
+
+                    <p class="contact__description-1">
+                        Id sit adipisicing proident tempor commodo anim pariatur.
+                    </p>
+
+                    <p class="contact__description-2">
+                        Nulla elit est elit voluptate exercitation esse aliquip dolore dolor fugiat nulla minim veniam ea.
+                    </p>
+                    <div class="geometric-box"></div>
+                    <div class="geometric-triangle"></div>
+                </div>
+                <div class="contact__mail">
+                    <h2 class="contact__title">
+                        Send me an email <i class="ri-mail-line"></i>
+                    </h2>
+                    <form action="" class="contact__form" id="contact-form">
+                        <div class="contact__group">
+                            <div class="contact__box">
+                                <input type="text" name="user_name" id="name" class="contact__input" required placeholder="Name">
+                                <label for="name" class="contact__label">Your Name</label>
+                            </div>
+                            <div class="contact__box">
+                                <input type="email" name="user_email" id="email" class="contact__input" required placeholder="Email">
+                                <label for="email" class="contact__label">Email Address</label>
+                            </div>
+                            <div class="contact__box">
+                                <input type="text" name="user_subject" id="subject" class="contact__input" required placeholder="Subject">
+                                <label for="subject" class="contact__label">Subject</label>
+                            </div>
+                            <div class="contact__box contact__area">
+                                <textarea name="user_message" id="message" cols="30" rows="10" class="contact__input">Message</textarea>
+                                <label for="message" class="contact__label"></label>
+                            </div>
+                        </div>
+                        <p class="contact__message" id="contact__message"></p>
+                        <button type="submit" class="contact__buton button">
+                            <i class="ri-send-plane-line"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+                <div class="contact__social">
+                    <img src="./assets/images/curved-arrow.svg" alt="arrow" class="contact__social-arrow">
+
+                    <div class="contact__social-data">
+                        <div>
+                            <p class="contact__social-description-1">
+                                If you prefer...
+                            </p>
+                            <p class="contact__social-description-2">
+                                Contact me through social media:
+                            </p>
+                        </div>
+                        <div class="contact__social-links">
+                            <a href="" class="contact__social-link" target="_blank">
+                                <i class="ri-whatsapp-line"></i>
+                            </a>
+                            <a href="" class="contact__social-link" target="_blank">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="" class="contact__social-link" target="_blank">
+                                <i class="ri-linkedin-box-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         </main>
 
         <!--==================== FOOTER ====================-->
         <footer class="footer">
-        
+            <div class="footer__container container grid">
+                <ul class="footer__links">
+                    <li>
+                        <a href="#home" class="footer__link">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about" class="footer__link">About</a>
+                    </li>
+                    <li>
+                        <a href="#projects" class="footer__link">Projects</a>
+                    </li>
+                </ul>
+                <span class="footer__copy">
+                    ©️ 2024 Digital Canvas.
+                </span>
+            </div>
         </footer>
 
         <!--========== SCROLL UP ==========-->
-
-
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-s-line"></i>
+        </a>
         <!--=============== SCROLLREVEAL ===============-->
         <script src=""></script>
 
         <!--=============== EMAIL JS ===============-->
-
+        <script
+            type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+      
 
         <!--=============== MAIN JS ===============-->
         <script src="assets/scripts/index.js"></script>
