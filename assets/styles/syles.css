@@ -476,14 +476,19 @@ img {
 }
 
 .home__social-link{
-    background-color: var(--black-color-light);
-    color: var(--white-color);
+    /* background-color: var(--black-color-light); */
+    /* border: 2px solid var(--black-color); */
+    color: var(--black-color);
     font-size: 1.25rem;
     padding: 6px;
     display: grid;
     place-items: center;
-    transition: background-color .3s ease;
+    transition: color .3s ease;
 }
+.home__social-link:hover{
+    color: var(--alt-color);
+}
+
 
 .home__info{
     margin-top: 4rem;
@@ -512,11 +517,11 @@ img {
 }
 
 .home__scroll-box{
-    background-color: var(--text-color);
-    color: var(--white-color);
+    /* background-color: var(--text-color); */
+    color: var(--black-color);
     width: 36px;
     height: 36px;
-    border-radius: 10px;
+    border: 3px solid var(--black-color);
     display: grid;
     place-items: center;
     font-size: 1rem;
@@ -578,7 +583,7 @@ img {
 }
 
 .button__ghost:hover{
-    border: 3px solid var(--first-color);
+    border: 3px solid var(--second-color);
 }
 
 /*=============== ABOUT ===============*/
@@ -1402,7 +1407,7 @@ img {
 
       .home__scroll-text{
         display: block;
-        color: var(--text-color);
+        color: var(--black-color);
         font-size: var(--small-font-size);
         font-weight: var(--font-medium);
       }
@@ -1413,7 +1418,7 @@ img {
       }
 
       .home__scroll-box i {
-        font-size: 1.25rem;
+        font-size: 2rem;
       }
 
 /*       .home__profile, .geometric-box{
@@ -1430,7 +1435,7 @@ img {
       }
 
       .home__social-link{
-        font-size: 1.5rem;
+        font-size: 2rem;
         padding: 0.5rem;
       }
 
