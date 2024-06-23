@@ -23,7 +23,7 @@
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Bai Jamjuree", sans-serif;
-  --consolas-font:"Source Code Pro", monospace;;
+  --consolas-font:"Source Code Pro", monospace;
   --biggest-font-size: 2.5rem;
   --h1-font-size: 1.75rem;
   --h2-font-size: 1.25rem;
@@ -92,17 +92,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-
-/*=============== THEME ===============*/
-
-
-/*========== Variables Dark theme ==========*/
-
-
-/*========== 
-	Color changes in some parts of 
-	the website, in dark theme
-==========*/
 
 
 /*=============== REUSABLE CSS CLASSES ===============*/
@@ -373,7 +362,11 @@ img {
 }
 /*=============== HOME ===============*/
 .home__container{
+    display: flex;
+    flex-direction: column;
     padding-top: 2rem;
+    align-items: center;
+
 }
 
 .home__name{
@@ -409,20 +402,19 @@ img {
 }
 
 .home__banner{
-    grid-template-columns: repeat(3,2fr);
+    display: flex;
+    align-items: center;
     justify-content: center;
-    row-gap: 3rem;
-    padding-top: 1rem;
+    width: fit-content;
     background-color: var(--alt-color);
     color: var(--white-color);
     border: 3px solid var(--black-color);
-    padding: 10px 20px;
-/*     font-size: 16px; */
+    padding: 10px 10px;
+    margin-top: 4rem;
     font-weight: bold;
     text-transform: uppercase;
     border-radius: 10px;
     text-align:left;
-    cursor: pointer;
     box-shadow: 5px 5px 0 var(--black-color);
     transition: all 0.3s ease;
 }
@@ -433,7 +425,8 @@ img {
   }
 
 .home__banner-title{
-    font-size: 32px;
+    font-size: 30px;
+    font-family: var(--body-font);
 }
 
 .home__banner-description{
@@ -568,7 +561,8 @@ img {
 }
 
 .button:hover{
-    background-color: var(--first-color);
+    background-color: var(--second-color);
+    color: var(--black-color);
 }
 
 .button__ghost{
@@ -686,35 +680,33 @@ img {
 }
 
 .services__banner-1{
-    position: absolute;
-    left: 2rem;
+    position: relative;
+    left: -8px;
+    top: -20px;
     background-color: #daf5f0;
     color: var(--black-color);
+   /*  font-size: 10px; */
     border: none;
     padding: 10px 20px;
-/*     font-size: 16px; */
     border-radius: 10px;
     text-align:left;
     width:fit-content;
-    cursor: pointer;
     box-shadow: 5px 5px 0 #87ceeb;
 }
 .services__banner-2{
-    position:absolute;
-    bottom: -1;
-    left: 75%;
+    position:relative;
+    bottom: -20px;
+    right: -9rem;
     background-color: #e3dff2;
     color: var(--black-color);
     border: none;
     padding: 10px 20px;
-/*     font-size: 16px; */
     border-radius: 10px;
     text-align:left;
     width:fit-content;
-    cursor: pointer;
     box-shadow: 5px 5px 0 #a388ee;
 }
-
+/* 
 .services__banner-3{
     position: absolute;
     left: -90px;
@@ -723,14 +715,13 @@ img {
     color: var(--black-color);
     border: none;
     padding: 10px 20px;
-/*     font-size: 16px; */
     border-radius: 10px;
     text-align:left;
     cursor: pointer;
     box-shadow: 5px 5px 0 #ffdb58;
 }
-
-.services__banner-1, .services__banner-2, .services__banner-3 p{
+ */
+.services__banner-1, .services__banner-2, p{
     font-family: "Source Code Pro";
 }
 
@@ -892,7 +883,7 @@ img {
 }
 .projects__link:hover,
 .projects__link:hover i{
-    color: var(--first-color);
+    color: var(--alt-color);
 }
 .projects__card:hover{
     box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
@@ -929,6 +920,7 @@ img {
 
 .contact__description-1{
     color: var(--title-color);
+    font-size: var(--h2-font-size);
     font-weight: var(--font-medium);
     margin-bottom: 2rem;
 }
@@ -1038,6 +1030,8 @@ img {
 .contact__buton{
     background-color: var(--first-color);
     cursor: pointer;
+    color: var(--black-color);
+    font-size: var(--h2-font-size);
     border-radius: 0;
 }
 
@@ -1074,8 +1068,8 @@ img {
 }
 
 .contact__social-description-1{
-    color: var(--text-color-light);
-    font-size: var(--normal-font-size);
+    color: var(--black-color);
+    font-size: var(--h2-font-size);
     font-weight: var(--font-medium);
     margin: 0.5rem;
 }
@@ -1099,11 +1093,11 @@ img {
     font-size: 1.75rem;
     display: grid;
     place-items: center;
-    transition: background-color .3s;
+    transition: color .3s;
 }
 
 .contact__social-link:hover{
-    background-color: var(--first-color);
+    color: var(--second-color);
 }
 
 .contact__message{
@@ -1185,7 +1179,6 @@ img {
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width:340px) {
-    
     .container{
         margin-inline: 1rem;
     }
@@ -1252,6 +1245,9 @@ img {
     .contact__social-description-2{
         color: var(--title-color);
     }
+
+
+ 
 }
 
 @media screen and (min-width:768px) {
@@ -1262,6 +1258,7 @@ img {
     .projects__container{
         grid-template-columns: repeat(2,350px);
     }
+
 }
 
 /* For large devices */
